@@ -1,168 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>parowka</title>
-    <link rel="stylesheet" href="reset.css" />
+    <title>Dashboard Podcastów</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/7.0.0/normalize.css "
-    />
   </head>
-
   <body>
-    <aside class="sb">
-      <div class="sb-top">
-        <img
-          src="assets/incomplete_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="logo"
-        />
+    <!-- Sidebar - ZAKTUALIZOWANY -->
+    <div class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">
+          <img
+            src="assets/settings_b_roll_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Logo"
+          />
+        </div>
       </div>
-      <nav class="sb-nav">
-        <ul>
-          <li>
+
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active">
+          <div class="nav-icon">
             <img
               src="assets/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt="home"
+              alt="Home"
             />
-          </li>
-          <li>
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <div class="nav-icon">
+            <img
+              src="assets/incomplete_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Analytics"
+            />
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <div class="nav-icon">
             <img
               src="assets/chat_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt="chat"
+              alt="Podcasts"
             />
-          </li>
-          <li>
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <div class="nav-icon">
             <img
               src="assets/group_add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-              alt="groups"
+              alt="Users"
             />
-          </li>
-        </ul>
+          </div>
+        </a>
+
+        <a href="#" class="nav-item">
+          <div class="nav-icon">
+            <img
+              src="assets/more_vert_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Settings"
+            />
+          </div>
+        </a>
       </nav>
-      <div class="sb-bottom">
-        <img
-          src="assets/settings_b_roll_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="settings"
-        />
-      </div>
-    </aside>
-    <header class="tb">
-      <input type="text" placeholder="Search" />
-      <div class="hdr-actions">
-        <img
-          src="assets/notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="notifications"
-        />
+
+      <div class="user-avatar"></div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="search-bar">
         <img
           src="assets/more_vert_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="more"
+          alt="Search"
+          style="width: 20px; height: 20px"
+        />
+        <input
+          type="text"
+          placeholder="Search podcasts, episodes, analytics..."
         />
       </div>
-    </header>
 
-    <main class="ct">
-      <div class="cs">
-        <div class="cd dl">
-          <p class="lbl">Downloads</p>
-          <h2 class="val">215,379</h2>
+      <div class="header-actions">
+        <div class="notification-icon">
+          <img
+            src="assets/notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="Notifications"
+            style="width: 24px; height: 24px"
+          />
         </div>
-
-        <div class="cd lv">
-          <p class="lbl">Live</p>
-          <h2 class="val">52,812</h2>
-        </div>
-      </div>
-
-      <div class="info">
-        <div class="info-t">
-          <h1>Event on 30/12/2015</h1>
-          <p>Published on 15/2/2014</p>
-          <button>Check it</button>
-        </div>
-
-        <div class="info-img"></div>
-      </div>
-    </main>
-    <section class="podcasts">
-      <div class="podcasts-header">
-        <h2>Top Performing Podcasts</h2>
-        <div class="podcasts-controls">
-          <button class="active">Top Podcasters</button>
-          <button>Top Episodes</button>
+        <div class="header-profile">
+          <img
+            src="https://technischools.com/_next/image?url=https%3A%2F%2Fdev.technischools.com%2Fstorage%2Fuploads%2F2023%2F05%2F25%2Fmateusz-kozowski_uid_646f36ad0d446.webp&w=1080&q=75"
+            alt="Profile"
+          />
         </div>
       </div>
+    </div>
 
-      <div class="podcasts-body">
-        <div class="chart">
-          <div class="grid">
-            <div class="item">
-              <p class="label">Stoic</p>
-              <div class="bar bar-xl"></div>
-              <div class="bar bar-l"></div>
+    <!-- Main Content -->
+    <div class="content">
+      <div class="top-boxes">
+        <div class="left-small-boxes">
+          <div class="small-box">
+            <div class="box-header">
+              <div class="box-title">Total >10m $</div>
+              <div class="box-icon">
+                <img
+                  src="assets/group_add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Users"
+                  style="width: 1.2rem; height: 1.2rem"
+                />
+              </div>
             </div>
-
-            <div class="item">
-              <p class="label">Weekly Show</p>
-              <div class="bar bar-xl"></div>
-              <div class="bar bar-s"></div>
-            </div>
-
-            <div class="item">
-              <p class="label">Stereo Pro</p>
-              <div class="bar bar-l"></div>
-              <div class="bar bar-sm"></div>
-            </div>
-
-            <div class="item">
-              <p class="label">Run Podcast</p>
-              <div class="bar bar-l"></div>
-              <div class="bar bar-sm"></div>
-            </div>
-
-            <div class="item">
-              <p class="label">Morning Brew</p>
-              <div class="bar bar-sm"></div>
-              <div class="bar bar-xs"></div>
+            <div class="box-value">24m</div>
+            <div class="box-change">
+              <img
+                src="assets/incomplete_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Up"
+                style="width: 0.8rem; height: 0.8rem"
+              />
+              99.8% from last month
             </div>
           </div>
 
-          <div class="tooltip">
-            <div>Downloads</div>
-            <div><strong>238</strong></div>
+          <div class="small-box">
+            <div class="box-header">
+              <div class="box-title">Avg. Duration</div>
+              <div class="box-icon">
+                <img
+                  src="assets/incomplete_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Clock"
+                  style="width: 1.2rem; height: 1.2rem"
+                />
+              </div>
+            </div>
+            <div class="box-value">25:60</div>
+            <div class="box-change negative">
+              <img
+                src="assets/incomplete_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Down"
+                style="width: 0.8rem; height: 0.8rem"
+              />
+              20.3% from last month
+            </div>
           </div>
         </div>
 
-        <aside class="list">
-          <ul>
-            <li class="pod">
-              <div class="meta">
-                <p class="title">Earth Tones</p>
-                <p class="name">Wade Warren</p>
-              </div>
-              <span class="time">2d</span>
-            </li>
-
-            <li class="pod">
-              <div class="meta">
-                <p class="title">Around the World</p>
-                <p class="name">Guy Hawkins</p>
-              </div>
-              <span class="time">2d</span>
-            </li>
-
-            <li class="pod">
-              <div class="meta">
-                <p class="title">World of Kids</p>
-                <p class="name">Adam Thorne</p>
-              </div>
-              <span class="time">2d</span>
-            </li>
-          </ul>
-        </aside>
+        <div class="large-box">
+          <div class="large-box-content">
+            <div class="box-title">Top Epstine Performance</div>
+            <div class="box-value">"Pedo Brew"</div>
+            <div class="box-change">
+              <img
+                src="assets/incomplete_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Up"
+                style="width: 0.9rem; height: 0.9rem"
+              />
+              41.069K plays this month
+            </div>
+            <div class="episode-meta">
+              Published: Oct 4, 2026<br />
+              Host: Donald Trump
+            </div>
+          </div>
+          <div class="large-box-icon">
+            <img
+              src="assets/incomplete_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt="Chart"
+              style="width: 4rem; height: 4rem"
+            />
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Charts & Podcasts Section -->
+    <div class="podcasts-section">
+      <div class="charts-container">
+        <div class="block-charts">
+          <div class="charts-header">
+            <div class="charts-title">Performance Analytics</div>
+            <div class="chart-period">Last 30 days</div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-item">
+              <div class="chart-item-title">Listeners Growth</div>
+              <div class="chart-container">
+                <canvas id="growthChart"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-item">
+              <div class="chart-item-title">Epstine Types</div>
+              <div class="chart-container">
+                <canvas id="typeChart"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-item">
+              <div class="chart-item-title">Platform Distribution</div>
+              <div class="chart-container">
+                <canvas id="platformChart"></canvas>
+              </div>
+            </div>
+
+            <div class="chart-item">
+              <div class="chart-item-title">Engagement Rate</div>
+              <div class="chart-container">
+                <canvas id="engagementChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-small-box">
+          <div class="box-title">
+            Top Podcasters
+            <div class="box-icon">
+              <img
+                src="assets/settings_b_roll_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt="Trophy"
+                style="width: 1.2rem; height: 1.2rem"
+              />
+            </div>
+          </div>
+
+          <div class="top-podcasts">
+            <div class="podcast-item">
+              <div class="podcast-icon">
+                <img
+                  src="assets/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Globe"
+                  style="width: 1.2rem; height: 1.2rem"
+                />
+              </div>
+              <div class="podcast-info">
+                <div class="podcast-name">Pedo Tones</div>
+                <div class="podcast-author">Epstine sounds • 12.4K listens</div>
+              </div>
+            </div>
+
+            <div class="podcast-item">
+              <div class="podcast-icon">
+                <img
+                  src="assets/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Compass"
+                  style="width: 1.2rem; height: 1.2rem"
+                />
+              </div>
+              <div class="podcast-info">
+                <div class="podcast-name">Around the Epstine island</div>
+                <div class="podcast-author">Donald Trump • 10.8K listens</div>
+              </div>
+            </div>
+
+            <div class="podcast-item">
+              <div class="podcast-icon">
+                <img
+                  src="assets/group_add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Child"
+                  style="width: 1.2rem; height: 1.2rem"
+                />
+              </div>
+              <div class="podcast-info">
+                <div class="podcast-name">World of Kids</div>
+                <div class="podcast-author">P Diddy • 9.7K listens</div>
+              </div>
+            </div>
+
+            <div class="podcast-item">
+              <div class="podcast-icon">
+                <img
+                  src="assets/chat_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="Volume"
+                  style="width: 1.2rem; height: 1.2rem"
+                />
+              </div>
+              <div class="podcast-info">
+                <div class="podcast-name">Files</div>
+                <div class="podcast-author">
+                  Epstine (feat. Donald Trump) • 8.9K listens
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
